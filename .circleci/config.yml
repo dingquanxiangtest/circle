@@ -7,4 +7,4 @@ jobs:
   runner:
     machine: true
     steps:
-      - run: echo `ll /root/quanxiang_charts_staging/`
+      - run: echo `ls /root/quanxiang_charts_staging/`
