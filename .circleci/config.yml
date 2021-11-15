@@ -6,5 +6,6 @@ workflows:
 jobs:
   runner:
     machine: true
+    resource_class: my-namespace/my-resource-class
     steps:
       - run: echo `ls /root/quanxiang_charts_staging/`
