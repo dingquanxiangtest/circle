@@ -1,5 +1,5 @@
 #ddfdfdfdfd stdfgfgfdffddfdfdrudfdctordfdfdf
-## 功能点ddddddfdfdddfdfdfdfdfdfdfffdfd
+## 功能点ddddddfdfdfgfgfddfdfdfdfdfdfdfffdfd
 | 状态   | 功能  | 备注 |
 |  :----  | :----  |:---- 
 | ✅   |json schema  | |
