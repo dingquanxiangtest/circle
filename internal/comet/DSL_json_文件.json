@@ -1,0 +1,84 @@
+{
+  "query": {
+    "match": {
+      "name": "testName"
+    },
+    "term": {
+      "name": "testName"
+    },
+    "terms": {
+      "age": [1, 2]
+    },
+    "range": {
+      "age": {
+         "gte": 1,
+         "gt": 1,
+         "lt": 1,
+         "lte": 1
+      }
+    },
+    "bool": {
+      "must": [{
+        "match": {
+          "name": "testName"
+        }
+      },
+        {
+          "term": {
+            "name": "testName"
+          }
+        },
+        {
+          "bool": {
+            "should": [{
+              "match": {
+                "name": "testName"
+              }
+            }]
+          }
+        }
+      ],
+      "should": [{
+        "match": {
+          "name": "testName"
+        }
+      },
+        {
+          "term": {
+            "name": "testName"
+          }
+        }
+      ],
+      "mustNot": [{
+        "match": {
+          "name": "testName"
+        }
+      },
+        {
+          "term": {
+            "name": "testName"
+          }
+        }
+      ]
+    }
+  },
+  "from": 1,
+  "size": 20,
+  "aggs": {
+    "alias_name1": {
+      "avg": {
+        "field": "xxx"
+      }
+    },
+    "alias_name1": {
+      "sum": {
+        "field": "xxxx"
+      }
+    }
+  },
+  "entity": {
+    "name": "xxx",
+    "age": 1
+  }
+
+}

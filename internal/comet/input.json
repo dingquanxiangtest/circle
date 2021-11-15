@@ -1,0 +1,75 @@
+[{
+  "method": "find",
+  "condition": [{
+    "key": "name",
+    "op": "like",
+    "value": ["a"]
+  },{
+    "key": "address._id",
+    "op": "eq",
+    "value": ["1"]
+  }],
+
+  "sort": ["id","-name"],
+  "page": 1,
+  "size": 2
+},
+
+{
+  "method": "update#set",
+  "condition": [{
+    "key": "name",
+    "op": "like",
+    "value": ["al"]
+  },{
+      "key": "friend.userID",
+      "op": "eq",
+      "value": [1]
+  }],
+
+ 
+  "entity": {
+    "name": "alice",
+    "age": 19,
+    "address": {
+      "contry": "china"
+    },
+    "friend":[
+        {
+            "userID":1,
+            "name":"tom"
+        }
+    ]
+  }
+},
+
+{
+  "method": "update#push",
+  "condition": [{
+    "key": "name",
+    "op": "like",
+    "value": ["al"]
+  }],
+
+  "entity": {
+    "friend": {
+      "userID":4,
+      "name": "bob1"
+    }
+  }
+},
+{
+  "method": "update#pull",
+  "condition": [{
+    "key": "name",
+    "op": "like",
+    "value": ["al"]
+  }],
+
+  "entity": {
+    "friend": {
+      "name": ["bob1"]
+    }
+  }
+}
+]
